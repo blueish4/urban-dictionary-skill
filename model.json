@@ -1,0 +1,275 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "urban dictionary",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AskAbout",
+                    "slots": [
+                        {
+                            "name": "word",
+                            "type": "GENERIC",
+                            "samples": [
+                                "Define {word}",
+                                "What is {word}",
+                                "What is the meaning of {word}",
+                                "{word}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "define {word}",
+                        "what is {word}",
+                        "what does {word} mean"
+                    ]
+                },
+                {
+                    "name": "InASentence",
+                    "slots": [],
+                    "samples": [
+                        "Can I have it in a sentence",
+                        "how would i use it",
+                        "usage"
+                    ]
+                },
+                {
+                    "name": "LaunchRequest",
+                    "slots": [],
+                    "samples": [
+                        "start",
+                        "hello"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "GENERIC",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "hackathon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hack"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "anon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "troll"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "alexa"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pineapple pizza"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "soup nazi"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fourty two"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "amazon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "the fourteen words"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ned"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "loony"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "madman"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "doom"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "rest"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "nerd"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ymmv"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "siri"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "michael"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "iain"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "niklas"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cat"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "nutter"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "square go"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cream"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hole"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sister mosaic"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tumour fragrant conscience"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "correct horse battery staple"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hyphenated-word"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hi-fi"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "science-fiction"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "long john silverman"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "jp morgamn"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dirty harry"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "AskAbout",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "word",
+                            "type": "GENERIC",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-AskAbout.IntentSlot-word"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Intent-AskAbout.IntentSlot-word",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What do you want to define?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Which word would you like me to define?"
+                    }
+                ]
+            }
+        ]
+    }
+}
